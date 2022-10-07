@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { interval, map, Observable, of, take, tap } from "rxjs";
 import { CageotPomme } from "../model/cageot-pomme.model";
+import { Tarte } from "../model/tarte.model";
 
 @Injectable({
     providedIn: 'root'
@@ -117,6 +118,12 @@ export class ApplePieService {
         );
         return fluxCageot$;
       }
+
+        
+public transformEnTarte(cp: CageotPomme): Tarte{
+  const tarte: Tarte = {...cp, cuit: true};
+  return tarte;
+}
 
 
     }
