@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'APPLEPIE';
+export class AppComponent implements OnInit {
+
+  //cageotPomme$!: Observable<CageotPomme[]>;
+
+
+  constructor() {}
+  
+  ngOnInit(): void {
+    //this.cageotPomme$ = this.applePieService.get()
+    }
+
+
 }
