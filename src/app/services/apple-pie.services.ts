@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { interval, map, Observable, of, take, tap } from "rxjs";
+import { interval, map, Observable, take } from "rxjs";
 import { CageotPomme } from "../model/cageot-pomme.model";
 import { Tarte } from "../model/tarte.model";
 
@@ -66,8 +66,6 @@ export class ApplePieService {
         
 public transformEnTarte(cp: CageotPomme): Tarte{
   const tarte: Tarte = {...cp, cuit: true};
-  return tarte;
+  return tarte; //renvoie un Obs qui renvoie qu'une seule tarte
 }
-
-
     }

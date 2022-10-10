@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, Observable } from 'rxjs';
 import { Tarte } from './model/tarte.model';
 
 @Component({
@@ -7,11 +8,12 @@ import { Tarte } from './model/tarte.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  tartes: Tarte[] = [];
+ //tartes$: Observable<Tarte[]>;
 
   constructor() {}
   
   ngOnInit(): void {
+  //  this.tartes$ = interval(1000);
     }
 
 

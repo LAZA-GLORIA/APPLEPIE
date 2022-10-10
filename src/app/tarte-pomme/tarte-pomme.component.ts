@@ -16,17 +16,13 @@ export class TartePommeComponent implements OnInit {
 
   ngOnInit(): void {
     this.tartePommeService.getCageotPomme().pipe(
-      map((cp: CageotPomme) => this.transformEnTarte(cp)),
-      tap(console.log)
+      map((cp: CageotPomme) => this.tartePommeService.transformEnTarte(cp)),
+      //tap(console.log)
     ).subscribe((tarte: Tarte)=> {
        this.tartes.push(tarte);
     });
   }
 
-  
-public transformEnTarte(cp: CageotPomme): Tarte{
-  const tarte: Tarte = {...cp, cuit: true};
-  return tarte;
-}
+
 
 }
