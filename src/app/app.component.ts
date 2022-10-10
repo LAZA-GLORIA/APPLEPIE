@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Tarte } from './model/tarte.model';
 
 @Component({
   selector: 'app-root',
@@ -6,14 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
-  //cageotPomme$!: Observable<CageotPomme[]>;
-
+  tartes: Tarte[] = [];
 
   constructor() {}
   
   ngOnInit(): void {
-    //this.cageotPomme$ = this.applePieService.get()
     }
 
 

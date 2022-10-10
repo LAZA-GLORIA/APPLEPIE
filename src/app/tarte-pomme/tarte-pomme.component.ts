@@ -29,9 +29,4 @@ public transformEnTarte(cp: CageotPomme): Tarte{
   return tarte;
 }
 
-transformEnTarteSwitch(cp: CageotPomme): Observable<Tarte>{
-   tarte$: Observable<Tarte> = {...cp, cuit: true};
-  return tarte;
-}
-
 }

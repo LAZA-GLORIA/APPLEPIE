@@ -10,7 +10,6 @@ import { ApplePieService } from '../services/apple-pie.services';
 })
 export class CageotPommeComponent implements OnInit {
   @Input() cageotPomme!: CageotPomme;
-   //fluxCageot$!: Observable<CageotPomme[]>;
 
   constructor(private cageotPommeService: ApplePieService) {}
 
