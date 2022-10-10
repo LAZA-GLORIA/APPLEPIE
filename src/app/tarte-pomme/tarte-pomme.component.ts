@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { map, tap } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { CageotPomme } from '../model/cageot-pomme.model';
 import { Tarte } from '../model/tarte.model';
 import { ApplePieService } from '../services/apple-pie.services';
@@ -26,6 +26,11 @@ export class TartePommeComponent implements OnInit {
   
 public transformEnTarte(cp: CageotPomme): Tarte{
   const tarte: Tarte = {...cp, cuit: true};
+  return tarte;
+}
+
+transformEnTarteSwitch(cp: CageotPomme): Observable<Tarte>{
+   tarte$: Observable<Tarte> = {...cp, cuit: true};
   return tarte;
 }
 
